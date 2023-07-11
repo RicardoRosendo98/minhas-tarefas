@@ -27,7 +27,9 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
               type="text"
               placeholder="Buscar"
               value={termo}
-              onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
+              onChange={(evento: { target: { value: string } }) =>
+                dispatch(alterarTermo(evento.target.value))
+              }
             />
             <S.Filtros>
               <FiltroCard
