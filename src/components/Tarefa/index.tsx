@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent, SetStateAction } from 'react'
+import { useState, useEffect, ChangeEvent } from 'react'
 import { useDispatch } from 'react-redux'
 
 import * as S from './styles'
@@ -65,9 +65,7 @@ const Tarefa = ({
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}
-        onChange={(evento: { target: { value: SetStateAction<string> } }) =>
-          setDescricao(evento.target.value)
-        }
+        onChange={(evento) => setDescricao(evento.target.value)}
       />
       <S.BarraAcoes>
         {estaEditando ? (

@@ -1,4 +1,4 @@
-import { FormEvent, SetStateAction, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
@@ -37,17 +37,13 @@ const Formulario = () => {
       <Form onSubmit={cadastarTarefa}>
         <Campo
           value={titulo}
-          onChange={(evento: { target: { value: SetStateAction<string> } }) =>
-            setTitulo(evento.target.value)
-          }
+          onChange={(evento) => setTitulo(evento.target.value)}
           type="text"
           placeholder="Título"
         />
         <Campo
           value={descricao}
-          onChange={(evento: { target: { value: SetStateAction<string> } }) =>
-            setDescricao(evento.target.value)
-          }
+          onChange={({ target }) => setDescricao(target.value)}
           as="textarea"
           placeholder="descrição da tarefa"
         />
