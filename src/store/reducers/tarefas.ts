@@ -10,24 +10,10 @@ const initialState: TarefaState = {
   itens: [
     {
       id: 1,
-      descricao: 'Estudar TypeScript revendo o exercicio',
+      descricao: 'Arroz, Feijão, Macarrão',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
-      titulo: 'Estudar TypeScript'
-    },
-    {
-      id: 2,
-      descricao: 'Estudar TypeScript revendo o exercicio6',
-      prioridade: enums.Prioridade.URGENTE,
-      status: enums.Status.PENDENTE,
-      titulo: 'Estudar Bootstrap'
-    },
-    {
-      id: 3,
-      descricao: 'Estudar JavaScript revendo o exercicio4',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.CONCLUIDA,
-      titulo: 'Estudar JavaScript'
+      titulo: 'Fazer compra'
     }
   ]
 }
